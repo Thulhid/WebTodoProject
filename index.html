@@ -1,53 +1,82 @@
+
 <html lang="en">
 
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>Taskify</title>
   <link rel="stylesheet" href="style.css">
+  <link rel="icon" type="image/x-icon" href="logo.ico">
 </head>
 
 <body>
-<div class="container">
-    <h1>My To Do List</h1>
-    <div class="input-field">
-        <input type="text" placeholder="Add a Task Here!">
-        <input type="time">
-        <input type="button" value="ADD">
 
-    </div>
-   
-   
-    <div class="task">
-            <input type="button" value="CMPD">
-      <h3>Play Cricket</h3>   
-      <input type="button" value="Star">
-      <input type="button" value="Edit">
-      <input type="button" value="Delete">
-      
+  <div class="sbg"> <!-- sbg:- task area background -->
+
+    <!-- Toggle button start -->
+
+    <div class="theme-toggle">
+      <img src="icon/moon.png" id="icon" title="Lght-Dark Theme">
     </div>
 
-    <div class="Completed">
-      <div class="Completed-title">
-        <h2>Completed</h2>
-        <input type="button" value="&#8595;">
-      </div>
-      <div class="Completed-task">
+    <!-- Toggle button end -->
 
-        <h3><strike>Play Cricket</strike></h3>
-        <input type="button" value="Back">
-        <input type="button" value="Delete">
+    <section class="container">
+
+      <h1>Taskify</h1> <!-- Brand Name -->
+
+      <!-- Input area start-->
+
+      <div class="input-field">
+
+        <input type="text" placeholder="Add a Task Here !" size="100" class="txt" title="Add a task">
+
+        <input type="time" class="time" title="Show time picker">
+
+        <input type="button" value="ADD" class="add-button" title="Add a task">
+
       </div>
 
+      <!-- Input area end-->
+
+      <div class="task-card"> </div> <!-- task list -->
+
+      <!-- Completed task area start-->
+
+      <div class="completed">
+
+        <div class="completed-title">
+
+          <h2>Completed</h2>
+
+        </div>
+
+        <div class="comp-card"> </div>
+
+      </div>
+
+      <!-- Completed task area end-->
+
+    </section>
+
+    <!-- Confirmation box start-->
+
+    <div class="modal hidden">
+      <button class="close-modal">&times;</button>
+      <h3 class="modal-title">Confirm deletion❓</h3>
+      <br>
+      <h3>
+        <em>Do you want to really delete?</em>
+      </h3>
+      <br><br>
+      <input type="button" value="DELETE" class="delete-modal">
     </div>
-  
-         
-       
-      </div>
-    
+    <div class="overlay hidden"></div>
+  </div>
 
-  
+  <!-- Confirmation box end-->
 
+  <script src="index.js"></script>
 </body>
 
 </html>
